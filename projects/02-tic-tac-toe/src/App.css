@@ -11,7 +11,7 @@
 }
 
 .game h1 {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   user-select: none;
 }
 
@@ -19,6 +19,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  margin-top: 16px;
 }
 
 .cell {
@@ -40,7 +41,8 @@
   gap: 16px;
 }
 
-.turn .cell {
+.turn .cell,
+.winner .cell {
   border: none;
   width: 70px;
   height: 70px;
@@ -49,4 +51,51 @@
 
 .cell.is-selected {
   background-color: #09f;
+}
+
+.winner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .3);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-content: center;
+}
+
+.winner .modal {
+  background-color: #111;
+  height: fit-content;
+  width: 320px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+}
+
+.winner .win {
+  width: fit-content;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #eee;
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color .3s
+}
+
+button:hover {
+  background-color: #eee;
+  color: #111;
 }
