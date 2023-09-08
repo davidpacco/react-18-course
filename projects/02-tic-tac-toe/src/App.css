@@ -4,3 +4,49 @@
   padding: 2rem;
   text-align: center;
 }
+
+.game {
+  width: fit-content;
+  margin: 40px auto;
+}
+
+.game h1 {
+  margin-bottom: 32px;
+  user-select: none;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  font-size: 48px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.turn {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.turn .cell {
+  border: none;
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+}
+
+.cell.is-selected {
+  background-color: #09f;
+}
