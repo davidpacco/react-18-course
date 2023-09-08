@@ -1,0 +1,9 @@
+:root {
+  background-color: #222;
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  color: white;
+}
