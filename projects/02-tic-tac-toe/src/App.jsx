@@ -8,8 +8,20 @@ import './App.css'
 import { Board } from './components/Board'
 
 function App() {
-  const [turn, setTurn] = useState(TURNS.x)
-  const [board, setBoard] = useState(Array(9).fill(null))
+  const [board, setBoard] = useState(() => {
+    const boardFromLocalStorage = window.localStorage.getItem('board')
+    return boardFromLocalStorage
+      ? JSON.parse(boardFromLocalStorage)
+      : Array(9).fill(null)
+  })
+
+  const [turn, setTurn] = useState(() => {
+    const turnFromLocalStorage = window.localStorage.getItem('turn')
+    return turnFromLocalStorage
+      ? JSON.parse(turnFromLocalStorage)
+      : TURNS.x
+  })
+
   const [winner, setWinner] = useState(null) // null means no winner and false means a tie
 
   const updateBoard = (index) => {
@@ -25,6 +37,10 @@ function App() {
     const newTurn = turn === TURNS.x ? TURNS.o : TURNS.x
     setTurn(newTurn)
 
+    // save current game in Local Storage
+    window.localStorage.setItem('board', JSON.stringify(newBoard))
+    window.localStorage.setItem('turn', JSON.stringify(newTurn))
+
     // check if winner or tie
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
@@ -39,6 +55,8 @@ function App() {
     setBoard(Array(9).fill(null))
     setTurn(TURNS.x)
     setWinner(null)
+    window.localStorage.removeItem('board')
+    window.localStorage.removeItem('turn')
   }
 
   return (
@@ -46,11 +64,11 @@ function App() {
       <h1>Tic Tac Toe</h1>
       <button onClick={resetGame}>Restart</button>
 
-      <section className="board">
+      <section className='board'>
         <Board  board={board} updateBoard={updateBoard}/>
       </section>
 
-      <section className="turn">
+      <section className='turn'>
         <Cell isSelected={turn === TURNS.x}>{TURNS.x}</Cell>
         <Cell isSelected={turn === TURNS.o}>{TURNS.o}</Cell>
       </section>
