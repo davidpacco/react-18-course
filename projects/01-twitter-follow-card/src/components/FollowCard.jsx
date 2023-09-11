@@ -14,7 +14,7 @@ export function FollowCard({ name, username }) {
   return (
     <div className="card">
       <div className="card__details">
-        <img className="card__img" src={`https://unavatar.io/twitter/${username}`} alt="Elon Musk's avatar" />
+        <img className="card__img" src={`https://unavatar.io/twitter/${username}`} alt={`${name}'s avatar`} />
         <div className="card__info">
           <strong className="card__name">{name}</strong>
           <span className="card__username">@{username}</span>
