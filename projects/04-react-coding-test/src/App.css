@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+.fact {
+  width: 60ch;
+  margin-bottom: 32px;
+}
+
+.cat-img {
+  height: 400px;
+}
