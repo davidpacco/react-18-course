@@ -1,6 +1,4 @@
-//const API_KEY = '4287ad07'
 const API_KEY = '3856d60c'
-// 3856d60c
 
 export const searchMovies = async ({ search }) => {
   if (search === '' || search.length < 3) return
