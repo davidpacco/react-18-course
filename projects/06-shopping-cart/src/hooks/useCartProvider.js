@@ -1,8 +1,8 @@
 import { useReducer } from 'react'
-import { cartReducer } from '../reducers/cart'
+import { cartReducer, cartInitialState } from '../reducers/cart'
 
 export function useCartProvider() {
-  const [state, dispatch] = useReducer(cartReducer, [])
+  const [state, dispatch] = useReducer(cartReducer, cartInitialState)
 
   const addToCart = product => dispatch({ type: 'ADD_TO_CART', payload: product })
 
