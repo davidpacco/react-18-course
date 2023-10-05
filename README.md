@@ -13,3 +13,4 @@
 | `03` | Mouse Follower | [View](projects/03-mouse-follower) | [Visit](https://64ff365605e289190ed49569--luminous-meerkat-20a064.netlify.app/) |
 | `04` | React Coding Test | [View](projects/04-react-coding-test) | [Visit](https://6500fa3928b5690b30817b3f--precious-malasada-4db491.netlify.app/) |
 | `05` | Movie Searcher | [View](projects/05-movie-searcher) | [Visit](https://651463deeb1d2f1b09dfd4ba--precious-cupcake-5774d2.netlify.app/)
+| `06` | E-commerce with shopping cart | [View](projects/06-shopping-cart) | [Visit](https://app.netlify.com/sites/luminous-scone-0239a3/deploys/651ecdf639e78600abab2c2d)
