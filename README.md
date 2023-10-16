@@ -15,3 +15,5 @@
 | `05` | Movie Searcher | [View](projects/05-movie-searcher) | [Visit](https://651463deeb1d2f1b09dfd4ba--precious-cupcake-5774d2.netlify.app/)
 | `06` | E-commerce with shopping cart | [View](projects/06-shopping-cart) | [Visit](https://651ecdf639e78600abab2c2d--luminous-scone-0239a3.netlify.app/)
 | `07` | React custom router | [View](projects/07-dav-router/)
+| `08` | To Do app with TypeScript |
+| `09` | Translator using OpenAI API | [View](projects/09-translator/) | [Visit](https://652d75cf514fa13e4435bd9b--funny-duckanoo-e32556.netlify.app/)
